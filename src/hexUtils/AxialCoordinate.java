@@ -30,4 +30,18 @@ public class AxialCoordinate {
 		return new CubeCoordinate(x, y, z);
 	}
 
+	@Override
+	public String toString() {
+		return this.vector.toString();
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		return this.toCube().equals(o);
+	}
+
+	@Override
+	public int hashCode() {
+		return this.toCube().hashCode();
+	}
 }
